@@ -5,11 +5,10 @@ import {Navbar, Nav, Container, NavDropdown} from "react-bootstrap";
 export default function Navigation() {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand href="#home" className="">
-                        <Image src={logo} width={30} height={30} alt="Logo of Indiana Seekr"/>{' '}
-                        Indiana Seekr
+                        <Image src={logo} width={30} height={30} alt="Logo of Indiana Seekr"/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
