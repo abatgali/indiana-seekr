@@ -13,8 +13,8 @@ export default function Navigation() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#features">Tech-Jobs</Nav.Link>
-                            <Nav.Link href="#pricing">News</Nav.Link>
+                            <Nav.Link href="#six-routes">Tech-Jobs</Nav.Link>
+                            <Nav.Link href="#news">News</Nav.Link>
                             <NavDropdown title="Hire" id="collapsible-nav-dropdown" menuVariant="dark">
                                 <NavDropdown.Item href="#action/3.1">Interns</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Support</NavDropdown.Item>
