@@ -5,17 +5,16 @@ import {Navbar, Nav, Container, NavDropdown} from "react-bootstrap";
 export default function Navigation() {
     return (
         <>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand href="#home" className="">
-                        <Image src={logo} width={30} height={30} alt="Logo of Indiana Seekr"/>{' '}
-                        Indiana Seekr
+                        <Image src={logo} width={30} height={30} alt="Logo of Indiana Seekr"/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#features">Tech-Jobs</Nav.Link>
-                            <Nav.Link href="#pricing">News</Nav.Link>
+                            <Nav.Link href="#six-routes">Tech-Jobs</Nav.Link>
+                            <Nav.Link href="#news">News</Nav.Link>
                             <NavDropdown title="Hire" id="collapsible-nav-dropdown" menuVariant="dark">
                                 <NavDropdown.Item href="#action/3.1">Interns</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Support</NavDropdown.Item>
