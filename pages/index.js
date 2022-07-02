@@ -1,15 +1,24 @@
 import Layout from '../components/layout'
-import {Carousel, Button, Stack, Container, Card} from "react-bootstrap";
+import {Carousel, Button, Stack, Container, Card, Modal} from "react-bootstrap";
 import one from "../public/hero_home.jpeg"
 import two from "../public/hero_home2.jpeg"
 import three from "../public/AdobeStock_223874324.jpeg"
 import four from "../public/AdobeStock_485881931.jpeg"
 import trend_img from "../public/trend.jpeg"
+import news_1 from "../public/images/us--in-indianapolis.jpeg"
+import news_2 from "../public/images/flag.jpeg"
 import {Paper} from "@mui/material";
 import Image from "next/image";
+import React from "react";
+import news_3 from "../public/images/hiring.png"
+
 
 export default function Home() {
-  return (
+
+    const [modalShow, setModalShow] = React.useState(false);
+
+
+    return (
       <>
         <section>
             <Carousel>
@@ -24,7 +33,7 @@ export default function Home() {
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <Stack direction="horizontal" gap={3} className="justify-content-center mb-5">
                             <Button variant="danger" size="lg">Jobs in Tech</Button>
-                            <Button variant="secondary" size="lg">Get Started</Button>
+                            <Button variant="secondary" size="lg" onClick={() => setModalShow(true)}>Get Started</Button>
                         </Stack>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -68,7 +77,7 @@ export default function Home() {
         <section>
             <Container className="p-5">
                 <h2>Selected Pathways</h2>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
+                <p className="mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna </p>
             </Container>
             <section>
@@ -85,7 +94,7 @@ export default function Home() {
             </section>
         </section>
       <Container>
-          <Paper className="p-4 mt-5" elevation={3}>
+          <Paper className="p-lg-5 m-lg-5" elevation={3}>
               <Carousel variant="dark" controls={false} indicators={false}>
                   <Carousel.Item>
                       <blockquote>“In terms of the highest tech worker percent growth by state, <strong>Indiana</strong> comes in at the second spot with <strong>8.4% growth</strong>.”
@@ -95,27 +104,32 @@ export default function Home() {
 
                   </Carousel.Item>
                   <Carousel.Item>
-                      <blockquote>“Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                          nonumy eirmod tempor invidunt ut labore et dolore magna” </blockquote>
-                      <p>~</p>
+                      <blockquote>CompTIA says tech jobs make up 5.5 percent of the state’s workforce, ranking Indiana 21st in the U.S. with over 181,000 workers. </blockquote>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                      <blockquote>“<strong>Indiana</strong> has been a top location to build high-quality software companies with talented teams.” <br/>~ Larry Contrella, general partner with JMI Equity. </blockquote>
                   </Carousel.Item>
               </Carousel>
           </Paper>
       </Container>
           <Container className="p-5">
               <h3>How We Work</h3>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              <p className="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
           </Container>
           <Container className="p-5">
-              <h3>Latest News</h3>
-              <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                  diam nonumy eirmod tempor invidunt ut labore et dolore magna </p>
-              <Stack direction="horizontal" gap={4}>
-                  {card("Trendy News", trend_img)}
-                  {card("Trendy News", trend_img)}
-                  {card("Trendy News", trend_img)}
-              </Stack>
+              <h3 id="news">Latest News</h3>
+
+              <div className="d-flex justify-content-evenly mt-5 mb-5">
+                  {card("Indiana’s deep talent pool", news_1, "The time has come to remove “emerging” from the description of Indiana as a major tech hub.")}
+                  {card("Skills-Based Hiring", news_3, "College grads aren’t the only target as hiring based on credentials, experience and ability rather than diplomas gains traction.")}
+                  {card("Study Identifies Critical Central Indiana Market Demands for Future Growth", news_2, "Indiana is increasingly seen as a major tech hub, evidenced by the results of work by  the Indiana Economic Development Corporation (IEDC) and TechPoint.")}
+              </div>
           </Container>
+
+          <MyVerticallyCenteredModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+          />
       </>
   )
 }
@@ -128,19 +142,45 @@ Home.getLayout = function getLayout(page) {
     )
 };
 
-function card(title, img) {
+function card(title, img, text) {
     return (
         <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={img}/>
+            <Image src={img}></Image>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
-                    Some quick example text to build on the card title and make up the
-                    {/* eslint-disable-next-line react/no-unescaped-entities */}
-                    bulk of the card's content.
+                    {text}
                 </Card.Text>
-                <Button variant="dark">Go somewhere</Button>
+                {/*<Button variant="dark">Go somewhere</Button>*/}
             </Card.Body>
         </Card>
+    );
+}
+
+function MyVerticallyCenteredModal(props) {
+    return (
+        <Modal
+            {...props}
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+        >
+            <Modal.Header closeButton>
+                <Modal.Title id="contained-modal-title-vcenter">
+                    Hello, Seekr!
+                </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <h4>Indiana Tech Jobs</h4>
+                <p>
+                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+                    consectetur ac, vestibulum at eros.
+                </p>
+            </Modal.Body>
+            <Modal.Footer>
+                <Button onClick={props.onHide}>Close</Button>
+            </Modal.Footer>
+        </Modal>
     );
 }
