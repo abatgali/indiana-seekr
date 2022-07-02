@@ -145,7 +145,7 @@ Home.getLayout = function getLayout(page) {
 function card(title, img, text) {
     return (
         <Card style={{ width: '18rem' }}>
-            <Image src={img}></Image>
+            <Image src={img} alt="news headline image"></Image>
             <Card.Body>
                 <Card.Title>{title}</Card.Title>
                 <Card.Text>
