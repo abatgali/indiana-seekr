@@ -1,10 +1,10 @@
 import Layout from '../components/layout'
 import {Carousel, Button, Stack, Container, Card, Modal} from "react-bootstrap";
-import one from "../public/hero_home.jpeg"
-import two from "../public/hero_home2.jpeg"
-import three from "../public/AdobeStock_223874324.jpeg"
-import four from "../public/AdobeStock_485881931.jpeg"
-import trend_img from "../public/trend.jpeg"
+import one from "../public/images/hero_home.jpeg"
+import two from "../public/images/hero_home2.jpeg"
+import second from "../public/images/slide2.jpeg"
+import three from "../public/images/AdobeStock_223874324.jpeg"
+import trend_img from "../public/images/trend.jpeg"
 import news_1 from "../public/images/us--in-indianapolis.jpeg"
 import news_2 from "../public/images/flag.jpeg"
 import {Paper} from "@mui/material";
@@ -16,7 +16,6 @@ import news_3 from "../public/images/hiring.png"
 export default function Home() {
 
     const [modalShow, setModalShow] = React.useState(false);
-
 
     return (
       <>
@@ -40,14 +39,9 @@ export default function Home() {
                 <Carousel.Item>
                     <Image
                         className="d-block w-100"
-                        src={one}
+                        src={second}
                         alt="Second slide"
                     />
-
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <Image
@@ -56,10 +50,6 @@ export default function Home() {
                         alt="Second slide"
                     />
 
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
                     <Image
@@ -80,13 +70,13 @@ export default function Home() {
                 <p className="mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna </p>
             </Container>
-            <section>
-            <div className="row">
+            <section id="six-routes">
+            <div className="row fw-bolder">
                     <div className="col border p-5">Junior Developer</div>
                     <div className="col border p-5">Business Analyst</div>
                     <div className="col border p-5">Product Owner</div>
                 </div>
-                <div className="row">
+                <div className="row fw-bolder">
                     <div className="col border p-5">Software Developer</div>
                     <div className="col border p-5">Product Manager</div>
                     <div className="col border p-5">IT Support</div>
@@ -94,7 +84,7 @@ export default function Home() {
             </section>
         </section>
       <Container>
-          <Paper className="p-lg-5 m-lg-5" elevation={3}>
+          <Paper className="p-5 m-5" elevation={3}>
               <Carousel variant="dark" controls={false} indicators={false}>
                   <Carousel.Item>
                       <blockquote>“In terms of the highest tech worker percent growth by state, <strong>Indiana</strong> comes in at the second spot with <strong>8.4% growth</strong>.”
@@ -114,12 +104,23 @@ export default function Home() {
       </Container>
           <Container className="p-5">
               <h3>How We Work</h3>
-              <p className="mt-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              <div className="mt-5 d-flex justify-content-around" id="work-children">
+                  <Carousel className="w-50 me-5" controls={false} indicators={false}>
+                      <Carousel.Item>
+                          <Image
+                              className="d-block w-100"
+                              src={one}
+                              alt="Second slide"
+                          />
+                      </Carousel.Item>
+                  </Carousel>
+                  <p className="w-50 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              </div>
           </Container>
           <Container className="p-5">
               <h3 id="news">Latest News</h3>
 
-              <div className="d-flex justify-content-evenly mt-5 mb-5">
+              <div className="d-flex justify-content-around mt-5 mb-5" id="news-children">
                   {card("Indiana’s deep talent pool", news_1, "The time has come to remove “emerging” from the description of Indiana as a major tech hub.")}
                   {card("Skills-Based Hiring", news_3, "College grads aren’t the only target as hiring based on credentials, experience and ability rather than diplomas gains traction.")}
                   {card("Study Identifies Critical Central Indiana Market Demands for Future Growth", news_2, "Indiana is increasingly seen as a major tech hub, evidenced by the results of work by  the Indiana Economic Development Corporation (IEDC) and TechPoint.")}
@@ -173,9 +174,7 @@ function MyVerticallyCenteredModal(props) {
             <Modal.Body>
                 <h4>Indiana Tech Jobs</h4>
                 <p>
-                    Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-                    dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-                    consectetur ac, vestibulum at eros.
+                    We can help you unleash your potential, learn and grow to help you chase our handpicked in-demand tech roles or with hiring the best candidates for your goals!
                 </p>
             </Modal.Body>
             <Modal.Footer>

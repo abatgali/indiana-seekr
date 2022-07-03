@@ -22,7 +22,6 @@ export default function Navigation() {
                             <NavDropdown title="Hire in Indiana" id="collapsible-nav-dropdown" menuVariant="light">
                                 <NavDropdown.Item href="#action/3.1">Interns</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">Support</NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Part-time</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.3">Full-time</NavDropdown.Item>
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">Learn More</NavDropdown.Item>
