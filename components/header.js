@@ -5,7 +5,7 @@ export default function Header() {
       <>
           <Head>
               <title>Indiana Seekr</title>
-              <meta name="description" content="Get Jobs or Get Hired" />
+              <meta name="description" content="Get the knowledge, tech jobs and the best local talent right here in one place!" />
               <link rel="icon" href="/indiana.ico" />
               <link
                   rel="stylesheet"
