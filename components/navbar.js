@@ -7,14 +7,14 @@ export default function Navigation() {
         <>
             <Navbar collapseOnSelect expand="sm" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home" className="">
+                    <Navbar.Brand href="/" className="">
                         <Image src={logo} width={40} height={40} alt="Logo of Indiana Seekr"/>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                             <Nav.Link href="#six-routes">Tech-Jobs</Nav.Link>
-                            <Nav.Link href="#deets">Learn</Nav.Link>
+                            <Nav.Link href="/learn">Learn</Nav.Link>
                             <Nav.Link href="#news">News</Nav.Link>
 
                         </Nav>
