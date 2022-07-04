@@ -28,6 +28,7 @@ export default function learn() {
         <>
             <Container className="p-5">
                 <h1>Pick your Path</h1>
+                <p>Unlock projects designed by the best in the industry to test your skills, get badges added to your profile when you finish and stand out from the rest!</p>
                 <div className="mx-auto mt-5" id="paths">
                     <Paper elevation={5} className="d-inline-block">
                         <Image src={pman} width={200} height={200}/>

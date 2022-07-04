@@ -13,9 +13,9 @@ export default function Navigation() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
-                            <Nav.Link href="#six-routes">Tech-Jobs</Nav.Link>
+                            <Nav.Link href="/#six-routes">Tech-Jobs</Nav.Link>
                             <Nav.Link href="/learn">Learn</Nav.Link>
-                            <Nav.Link href="#news">News</Nav.Link>
+                            <Nav.Link href="/#news">News</Nav.Link>
 
                         </Nav>
                         <Nav>
@@ -26,8 +26,8 @@ export default function Navigation() {
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">Learn More</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link eventKey={2} href="#memes">
-                                Sign In
+                            <Nav.Link eventKey={2} href="#signin">
+                                Hello, Seekr!
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
