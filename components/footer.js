@@ -3,6 +3,7 @@ import logo from "../public/indiana_seekr_logo.png"
 import {Form} from "react-bootstrap";
 import {Button} from "react-bootstrap";
 
+
 export default function Footer() {
     return (
         <>
