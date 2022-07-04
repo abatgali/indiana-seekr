@@ -14,3 +14,36 @@ a {
 * {
   box-sizing: border-box;
 }
+
+h3, h2 {
+  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+
+  #caption {
+    display: none;
+  }
+
+  #work-children {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  #news-children {
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+
+  #news-children > Carousel {
+    margin: 0;
+    width: 75%;
+  }
+
+  #footer {
+    flex-direction: column;
+  }
+
+}

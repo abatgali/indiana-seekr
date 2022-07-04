@@ -11,6 +11,7 @@ import {Paper} from "@mui/material";
 import Image from "next/image";
 import React from "react";
 import news_3 from "../public/images/hiring.png"
+import recruiter from "../public/images/hire.jpeg"
 
 
 export default function Home() {
@@ -20,16 +21,16 @@ export default function Home() {
     return (
       <>
         <section>
-            <Carousel>
+            <Carousel id="carousel">
                 <Carousel.Item>
                     <Image
                         className="d-block w-100"
                         src={two}
-                        alt="First slide"
+                        alt="You can land the tech job you are after right here in Indiana."
                     />
                     <Carousel.Caption>
                         <h1>Learn & Empower <br/> Your Career in Tech</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p id="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                         <Stack direction="horizontal" gap={3} className="justify-content-center mb-5">
                             <Button variant="danger" size="lg">Jobs in Tech</Button>
                             <Button variant="secondary" size="lg" onClick={() => setModalShow(true)}>Get Started</Button>
@@ -40,14 +41,14 @@ export default function Home() {
                     <Image
                         className="d-block w-100"
                         src={second}
-                        alt="Second slide"
+                        alt="Indiana Seekr accessible to everyone and helps people from every background reach their potential."
                     />
                 </Carousel.Item>
                 <Carousel.Item>
                     <Image
                         className="d-block w-100"
                         src={three}
-                        alt="Second slide"
+                        alt="Jobs for everyone, hiring not only college graduates but the ones with the right skills. Upskill using our platform right here."
                     />
 
                 </Carousel.Item>
@@ -55,7 +56,7 @@ export default function Home() {
                     <Image
                         className="d-block w-100"
                         src={trend_img}
-                        alt="Third slide"
+                        alt="Indiana on the rise and an attractive place for tech companies."
                     />
                     <Carousel.Caption>
                         <h2>Jobs in Indiana <br/>Set to Rise</h2>
@@ -105,16 +106,16 @@ export default function Home() {
           <Container className="p-5">
               <h3>How We Work</h3>
               <div className="mt-5 d-flex justify-content-around" id="work-children">
-                  <Carousel className="w-50 me-5" controls={false} indicators={false}>
+                  <Carousel className="w-lg-50 me-lg-5" controls={false} indicators={false}>
                       <Carousel.Item>
                           <Image
-                              className="d-block w-100"
+                              className="d-block w-100 rounded"
                               src={one}
                               alt="Second slide"
                           />
                       </Carousel.Item>
                   </Carousel>
-                  <p className="w-50 ">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                  <p className="w-lg-50 mt-xs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
               </div>
           </Container>
           <Container className="p-5">
@@ -152,7 +153,6 @@ function card(title, img, text) {
                 <Card.Text>
                     {text}
                 </Card.Text>
-                {/*<Button variant="dark">Go somewhere</Button>*/}
             </Card.Body>
         </Card>
     );
@@ -174,12 +174,12 @@ function MyVerticallyCenteredModal(props) {
             <Modal.Body>
                 <h4>Indiana Tech Jobs</h4>
                 <p>
-                    We can help you unleash your potential, learn and grow to help you chase our handpicked in-demand tech roles or with hiring the best candidates for your goals!
+                    We can help you unleash your potential, learn and grow to help you chase your place in tech or with hiring the best candidates for your goals!
                 </p>
+                <div className="d-flex">
+                    <Image src={recruiter} className="rounded-pill"></Image>
+                </div>
             </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
-            </Modal.Footer>
         </Modal>
     );
 }
