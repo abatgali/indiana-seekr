@@ -26,7 +26,7 @@ export default function Navigation() {
                                 <NavDropdown.Divider />
                                 <NavDropdown.Item href="#action/3.4">Learn More</NavDropdown.Item>
                             </NavDropdown>
-                            <Nav.Link eventKey={2} href="#signin">
+                            <Nav.Link eventKey={2} href="/profile">
                                 Hello, Seekr!
                             </Nav.Link>
                         </Nav>
