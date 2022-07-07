@@ -30,10 +30,10 @@ export default function Home() {
                     />
                     <Carousel.Caption>
                         <h1>Learn & Empower <br/> Your Career in Tech</h1>
-                        <p id="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                        <p id="caption">Learn the necessary skills in order to land your dream job all with the help of our resources.</p>
                         <Stack direction="horizontal" gap={3} className="justify-content-center mb-5">
-                            <Button variant="danger" size="lg">Jobs in Tech</Button>
-                            <Button variant="secondary" size="lg" onClick={() => setModalShow(true)}>Get Started</Button>
+                            <Button variant="danger" >Jobs in Tech</Button>
+                            <Button variant="secondary" onClick={() => setModalShow(true)}>Get Started</Button>
                         </Stack>
                     </Carousel.Caption>
                 </Carousel.Item>
@@ -59,8 +59,8 @@ export default function Home() {
                         alt="Indiana on the rise and an attractive place for tech companies."
                     />
                     <Carousel.Caption>
-                        <h2>Jobs in Indiana <br/>Set to Rise</h2>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h2>Jobs in Indiana <br/>on the Rise</h2>
+                        <p>The tech workforce has grown by 16.3% over the past decade, a 60 percent faster rate than seen across other industries.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -68,8 +68,7 @@ export default function Home() {
         <section>
             <Container className="p-5">
                 <h2>Selected Pathways</h2>
-                <p className="mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna </p>
+                <p className="mt-4 text-center">Select one or more of our six different pathways in order to learn everything you need to land the job!</p>
             </Container>
             <section id="six-routes">
             <div className="row fw-bolder">
@@ -115,7 +114,12 @@ export default function Home() {
                           />
                       </Carousel.Item>
                   </Carousel>
-                  <p className="w-lg-50 mt-xs-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+                  <p className="w-lg-50 mt-xs-4">
+                      We bring forth a platform that brings more personal and inclusive profiles showcasing their relevant experiences,
+                      skills and projects all the while making it easily accessible to people from different backgrounds. <br/>Our expertly designed pathways equip you with the necessary tech skills to make sure you have the experience employers are seeking.
+                      {/* eslint-disable-next-line react/no-unescaped-entities */}
+                      <br/>This gives employers the opportunity to view candidates' portfolios for completed projects and earned skills for a potential hiring opportunity.
+                  </p>
               </div>
           </Container>
           <Container className="p-5">
