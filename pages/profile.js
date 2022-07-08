@@ -11,7 +11,8 @@ import PlumbingIcon from '@mui/icons-material/Plumbing';
 import DataUsageIcon from '@mui/icons-material/DataUsage';
 import DataObjectIcon from '@mui/icons-material/DataObject';
 import PestControlIcon from '@mui/icons-material/PestControl';
-import Image from "next/image";
+import {Breadcrumb} from "react-bootstrap";
+import HomeIcon from '@mui/icons-material/Home';
 
 profile.getLayout = function getLayout(page) {
     return (
@@ -25,6 +26,10 @@ export default function profile() {
     return (
         <>
             <Container className="p-5">
+                <Breadcrumb >
+                    <HomeIcon/> &nbsp; <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Profile</Breadcrumb.Item>
+                </Breadcrumb>
                 <Paper elevation={3} className="rounded p-5" id="profile-paper">
                     <div >
                         <Avatar id="profile-header" sx={{ height: '70px', width: '70px' }}/>

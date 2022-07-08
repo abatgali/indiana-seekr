@@ -5,7 +5,7 @@ File: learn.js
 Description: 
 */
 import Layout from "../components/layout";
-import {Container} from "react-bootstrap";
+import {Container, Breadcrumb} from "react-bootstrap";
 import {Paper} from "@mui/material";
 import Image from "next/image";
 import sdev from "../public/images/software_dev.jpg"
@@ -14,6 +14,8 @@ import pown from "../public/images/product_owner.jpg"
 import pman from "../public/images/product_manager.jpg"
 import analyst from "../public/images/business_analyst.jpg"
 import support from "../public/images/IT_support.png"
+import HomeIcon from "@mui/icons-material/Home";
+
 
 learn.getLayout = function getLayout(page) {
     return (
@@ -27,7 +29,10 @@ export default function learn() {
     return(
         <>
             <Container className="p-5">
-
+                <Breadcrumb >
+                    <HomeIcon/> &nbsp; <Breadcrumb.Item href="/" id="custom-link">Home</Breadcrumb.Item>
+                    <Breadcrumb.Item active>Learn</Breadcrumb.Item>
+                </Breadcrumb>
                 <h1>Pick your Path</h1>
                 <p>Unlock projects designed by the best in the industry to test your skills, get badges added to your profile when you finish and stand out from the rest!</p>
                 <div className="mx-auto mt-5" id="paths">

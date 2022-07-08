@@ -112,7 +112,7 @@ export default function Home() {
                   <Carousel className="w-lg-50 me-lg-5" controls={false} indicators={false}>
                       <Carousel.Item>
                           <Image
-                              className="d-block w-100 rounded"
+                              className="d-block w-75 rounded"
                               src={one}
                               alt="Second slide"
                           />
