@@ -12,6 +12,7 @@ import Image from "next/image";
 import React from "react";
 import news_3 from "../public/images/hiring.png"
 import recruiter from "../public/images/hire.jpeg"
+import Link from "next/link"
 
 
 export default function Home() {
@@ -32,7 +33,7 @@ export default function Home() {
                         <h1>Learn & Empower <br/> Your Career in Tech</h1>
                         <p id="caption">Learn the necessary skills in order to land your dream job all with the help of our resources.</p>
                         <Stack direction="horizontal" gap={3} className="justify-content-center mb-5">
-                            <Button variant="danger" >Jobs in Tech</Button>
+                            <Button variant="danger" href="/#six-routes">Jobs in Tech</Button>
                             <Button variant="secondary" onClick={() => setModalShow(true)}>Get Started</Button>
                         </Stack>
                     </Carousel.Caption>
@@ -60,7 +61,7 @@ export default function Home() {
                     />
                     <Carousel.Caption>
                         <h2>Jobs in Indiana <br/>on the Rise</h2>
-                        <p>The tech workforce has grown by 16.3% over the past decade, a 60 percent faster rate than seen across other industries.</p>
+                        <p id="another-one">The tech workforce has grown by 16.3% over the past decade, a 60 percent faster rate than seen across other industries.</p>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
@@ -68,20 +69,23 @@ export default function Home() {
         <section>
             <Container className="p-5">
                 <h2>Selected Pathways</h2>
-                <p className="mt-4 text-center">Select one or more of our six different pathways in order to learn everything you need to land the job!</p>
+                <p className="mt-4 text-center">Select one or more from our six different pathways in order to learn everything you need to land the job!</p>
             </Container>
-            <section id="six-routes">
-            <div className="row fw-bolder">
-                    <div className="col border p-5">Junior Developer</div>
-                    <div className="col border p-5">Business Analyst</div>
-                    <div className="col border p-5">Product Owner</div>
-                </div>
-                <div className="row fw-bolder">
-                    <div className="col border p-5">Software Developer</div>
-                    <div className="col border p-5">Product Manager</div>
-                    <div className="col border p-5">IT Support</div>
-                </div>
-            </section>
+            <Link href="/learn">
+                <section id="six-routes">
+                    <div className="row fw-bolder">
+                        <div className="col border p-5">Junior Developer</div>
+                        <div className="col border p-5">Business Analyst</div>
+                        <div className="col border p-5">Product Owner</div>
+                    </div>
+                    <div className="row fw-bolder">
+                        <div className="col border p-5">Software Developer</div>
+                        <div className="col border p-5">Product Manager</div>
+                        <div className="col border p-5">IT Support</div>
+                    </div>
+                </section>
+            </Link>
+
         </section>
       <Container>
           <Paper className="p-5 m-5" elevation={3}>
@@ -108,14 +112,14 @@ export default function Home() {
                   <Carousel className="w-lg-50 me-lg-5" controls={false} indicators={false}>
                       <Carousel.Item>
                           <Image
-                              className="d-block w-100 rounded"
+                              className="d-block w-75 rounded"
                               src={one}
                               alt="Second slide"
                           />
                       </Carousel.Item>
                   </Carousel>
                   <p className="w-lg-50 mt-xs-4">
-                      We bring forth a platform that brings more personal and inclusive profiles showcasing their relevant experiences,
+                      We bring forth a platform that brings more personal and inclusive profiles showcasing relevant experiences,
                       skills and projects all the while making it easily accessible to people from different backgrounds. <br/>Our expertly designed pathways equip you with the necessary tech skills to make sure you have the experience employers are seeking.
                       {/* eslint-disable-next-line react/no-unescaped-entities */}
                       <br/>This gives employers the opportunity to view candidates' portfolios for completed projects and earned skills for a potential hiring opportunity.

@@ -18,7 +18,7 @@ export default function Footer() {
                     {/* eslint-disable-next-line react/no-unescaped-entities */}
                     <p>Stay in the loop. We'll keep you updated.</p>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
-                        <Form.Control type="email" placeholder="Enter email" />
+                        <Form.Control type="email" placeholder="Enter email"/>
                     </Form.Group>
                     <Button variant="outline-primary">Subscribe</Button>
 
